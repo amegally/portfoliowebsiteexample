@@ -23,10 +23,9 @@ jobs:
         run: |
           mkdir -p dist
           cp -r public dist/
-          cp -r views dist/
-          cp server.js dist/
-          cp package.json dist/
-          cp package-lock.json dist/
+          cp index.html dist/
+          cp about.html dist/ || true
+          cp contact.html dist/ || true
           
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
