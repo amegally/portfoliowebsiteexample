@@ -59,9 +59,25 @@ const server = http.createServer(async (req, res) => {
             return;
         }
 
-        // Handle static files
-        if (req.url.startsWith('/public/')) {
-            const filePath = path.join(__dirname, req.url);
+        // Handle CSS files
+        if (req.url.startsWith('/css/')) {
+            const filePath = path.join(__dirname, 'public', req.url);
+            try {
+                const content = await fs.promises.readFile(filePath);
+                res.writeHead(200, { 'Content-Type': 'text/css' });
+                res.end(content);
+                return;
+            } catch (error) {
+                console.error('Error serving CSS file:', error);
+                res.writeHead(404);
+                res.end('404 Not Found');
+                return;
+            }
+        }
+
+        // Handle images
+        if (req.url.startsWith('/images/')) {
+            const filePath = path.join(__dirname, 'public', req.url);
             try {
                 const content = await fs.promises.readFile(filePath);
                 const ext = path.extname(filePath);
@@ -70,7 +86,7 @@ const server = http.createServer(async (req, res) => {
                 res.end(content);
                 return;
             } catch (error) {
-                console.error('Error serving static file:', error);
+                console.error('Error serving image:', error);
                 res.writeHead(404);
                 res.end('404 Not Found');
                 return;
