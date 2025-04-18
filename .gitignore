@@ -1,17 +1,29 @@
 # Dependencies
 node_modules/
 
+# Build output
+build/
+
 # Environment variables
 .env
 
-# OS files
+# System files
 .DS_Store
-
-# Logs
 *.log
-npm-debug.log*
+
+# IDE specific files
+.idea/
+.vscode/
+.cursor/
 
 # Runtime data
+data/*.json
+!data/projects.json
+
+# Logs
+npm-debug.log*
+
+# OS files
 pids
 *.pid
 *.seed
