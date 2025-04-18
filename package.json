@@ -2,13 +2,11 @@
   "name": "portfoliowebsite",
   "version": "1.0.0",
   "description": "A clean and responsive portfolio website built with vanilla Node.js, featuring project showcases, about page, and contact functionality.",
-  "main": "server.js",
+  "main": "functions/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rm -rf build && mkdir build",
-    "build": "cp -r public/* build/ && cp *.html build/ && cp -r data build/"
+    "start": "netlify-lambda serve functions",
+    "build": "netlify-lambda build functions",
+    "dev": "node server.js"
   },
   "keywords": [
     "portfolio",
@@ -17,5 +15,7 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "netlify-lambda": "^2.0.15"
+  }
 }
