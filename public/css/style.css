@@ -6,12 +6,43 @@
 }
 
 :root {
+    /* Light mode (default) */
     --primary-color: #000;
     --background-color: #fff;
     --text-color: #000;
+    --secondary-text-color: #666;
+    --card-background: #fff;
+    --tech-tag-background: #f5f5f5;
     --spacing-unit: 1rem;
     --max-width: 1400px;
     --cursor-size: 8px;
+}
+
+[data-theme="dark"] {
+    --primary-color: #fff;
+    --background-color: #121212;
+    --text-color: #fff;
+    --secondary-text-color: #a0a0a0;
+    --card-background: #1e1e1e;
+    --tech-tag-background: #2a2a2a;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    cursor: none;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color);
 }
 
 /* Custom Cursor Styles */
@@ -55,6 +86,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -73,6 +105,7 @@ header {
     top: 0;
     background-color: var(--background-color);
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 nav {
@@ -136,8 +169,8 @@ nav a {
 .project-card {
     position: relative;
     cursor: pointer;
-    background: #fff;
-    transition: transform 0.3s ease;
+    background: var(--card-background);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .project-card:hover {
@@ -183,7 +216,7 @@ nav a {
 .project-content p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #666;
+    color: var(--secondary-text-color);
     margin-bottom: 1rem;
 }
 
@@ -195,11 +228,10 @@ nav a {
 }
 
 .tech-tag {
-    background: #f5f5f5;
+    background: var(--tech-tag-background);
     padding: 0.25rem 0.75rem;
     border-radius: 2rem;
-    font-size: 0.875rem;
-    color: #666;
+    color: var(--text-color);
 }
 
 /* Filters */
