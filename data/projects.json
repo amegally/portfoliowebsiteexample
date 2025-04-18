@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "AI Code Assistant - Unlock Vibe Coding",
+            "description": "An intelligent coding assistant powered by machine learning that helps developers write better code faster.",
+            "category": "AI Coding",
+            "image": "/public/images/placeholder.jpg",
+            "technologies": ["Python", "TensorFlow", "NLP"],
+            "featured": true
+        },
+        {
+            "id": 2,
+            "title": "Portfolio Website",
+            "description": "A responsive portfolio website built with vanilla Node.js, showcasing clean and modern design principles.",
+            "category": "Personal",
+            "image": "/public/images/placeholder.jpg",
+            "technologies": ["Node.js", "HTML", "CSS"],
+            "featured": true
+        },
+        {
+            "id": 3,
+            "title": "Retro Game Collection",
+            "description": "A collection of classic arcade games reimagined for the modern web, built with vanilla JavaScript.",
+            "category": "Just for Fun",
+            "image": "/public/images/placeholder.jpg",
+            "technologies": ["JavaScript", "HTML Canvas", "CSS"],
+            "featured": true
+        },
+        {
+            "id": 4,
+            "title": "AI Image Generator",
+            "description": "A creative tool that generates unique images using machine learning algorithms.",
+            "category": "AI Coding",
+            "image": "/public/images/placeholder.jpg",
+            "technologies": ["Python", "PyTorch", "React"],
+            "featured": true
+        }
+    ]
+} 

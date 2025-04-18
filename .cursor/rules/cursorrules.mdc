@@ -1,0 +1,51 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Cursor Rules for Portfolio Website
+
+## Tech Stack Requirements
+- Backend: Node.js (Vanilla)
+- Frontend: HTML, CSS, JavaScript (No frameworks)
+- Email: Built-in Node.js mailer functionality
+- Storage: File-based (JSON for data, local storage for images)
+
+## Rules for Making Changes
+
+1. **README First**
+   - Always check README.md before making any changes
+   - Review the implementation plan in README.md to ensure changes align with the current phase
+   - Verify which tasks are completed and which are pending
+
+2. **After Making Changes**
+   - Update README.md to reflect any completed tasks
+   - Mark tasks as complete using [x] in the implementation plan
+   - Add any new tasks that were identified during implementation
+   - Document any important decisions or changes in the Development Notes section
+
+3. **Code Organization**
+   - Follow the project structure defined in README.md
+   - Keep all static assets in the public directory
+   - Maintain separation of concerns between views and server logic
+   - Keep partials (header/footer) in the views/partials directory
+
+4. **Documentation Requirements**
+   - All major changes must be documented in README.md
+   - New features must be added to the Features section
+   - Technical changes must be reflected in the Tech Stack section
+   - Update Getting Started guide if setup steps change
+
+5. **Quality Control**
+   - Ensure changes maintain the "vanilla" approach (no frameworks)
+   - Test responsive design after UI changes
+   - Verify dynamic header/footer functionality remains intact
+   - Check that project filtering still works after changes
+
+6. **Progress Tracking**
+   - Use checkboxes in README.md to track progress
+   - Update phase status in implementation plan
+   - Document any blockers or issues in Development Notes
+   - Keep the implementation plan up to date
+
+Remember: The README.md is our source of truth for the project's current state and future direction. Always refer to it and keep it updated. 
