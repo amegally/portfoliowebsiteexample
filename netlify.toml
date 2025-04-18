@@ -1,4 +1,5 @@
 [build]
+<<<<<<< Updated upstream
   command = "npm install"
   publish = "/"
   functions = "functions"
@@ -14,3 +15,12 @@
 # Return 404 for missing files instead of redirecting to index
 [build.processing]
   skip_processing = true 
+=======
+  command = "node build.js"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
+>>>>>>> Stashed changes

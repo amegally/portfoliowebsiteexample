@@ -534,6 +534,7 @@ footer {
 }
 
 /* Contact Form Styles */
+<<<<<<< Updated upstream
 .contact-form {
     max-width: 600px;
     margin: 2rem auto;
@@ -543,6 +544,8 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+=======
+>>>>>>> Stashed changes
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -551,7 +554,10 @@ footer {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--text-color);
+<<<<<<< Updated upstream
     font-weight: 500;
+=======
+>>>>>>> Stashed changes
 }
 
 .form-group input,
@@ -560,15 +566,27 @@ footer {
     padding: 0.75rem;
     border: 1px solid var(--secondary-text-color);
     border-radius: 4px;
+<<<<<<< Updated upstream
     background: var(--background-color);
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
     transition: border-color 0.3s ease;
+=======
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+>>>>>>> Stashed changes
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
+<<<<<<< Updated upstream
     border-color: var(--primary-color);
 }
 
@@ -587,4 +605,23 @@ footer {
 
 .submit-btn:hover {
     transform: translateY(-2px);
+=======
+    border-color: var(--text-color);
+}
+
+button.contact-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: none;
+    transition: opacity 0.3s ease;
+}
+
+button.contact-button:hover {
+    opacity: 0.8;
+>>>>>>> Stashed changes
 } 
