@@ -1,8 +1,12 @@
 [build]
-  publish = "public"
+  publish = "build"
   command = "npm run build"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200 
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Return 404 for missing files instead of redirecting to index
+[build.processing]
+  skip_processing = true 
