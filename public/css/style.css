@@ -11,6 +11,35 @@
     --text-color: #000;
     --spacing-unit: 1rem;
     --max-width: 1400px;
+    --cursor-size: 8px;
+}
+
+/* Custom Cursor Styles */
+html {
+    cursor: none;
+}
+
+.cursor {
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    background-color: var(--text-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Style for links and interactive elements */
+a, button, .project-card {
+    cursor: none;
+}
+
+a:hover ~ .cursor,
+button:hover ~ .cursor,
+.project-card:hover ~ .cursor {
+    background-color: #ff0000;
+    transform: scale(1.5);
 }
 
 @font-face {

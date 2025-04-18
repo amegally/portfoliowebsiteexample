@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="cursor"></div>
     <header>
         <nav>
             <a href="/" class="logo">Keo</a>
@@ -19,4 +20,28 @@
             </ul>
         </nav>
     </header>
-    <main> 
+    <main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.querySelector('.cursor');
+            
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            // Add hover effect for interactive elements
+            const interactiveElements = document.querySelectorAll('a, button, .project-card');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.backgroundColor = '#ff0000';
+                    cursor.style.transform = 'scale(1.5)';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.backgroundColor = '#000';
+                    cursor.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script> 
