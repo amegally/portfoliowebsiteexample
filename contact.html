@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About me - Portfolio website showcasing my projects and skills">
-    <title>About Me - Portfolio</title>
+    <meta name="description" content="Contact me - Get in touch for collaboration or questions">
+    <title>Contact - Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -29,17 +29,27 @@
         </nav>
     </header>
     <main>
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-text">
-                    <h1>About Me</h1>
-                    <p>Hello! I'm a passionate developer and designer with a love for creating beautiful, functional, and user-friendly websites. I specialize in front-end development and UI/UX design, always striving to create memorable digital experiences.</p>
-                    <p>With expertise in HTML, CSS, and JavaScript, I build responsive and accessible websites that work seamlessly across all devices. I believe in clean code, modern design principles, and creating solutions that make a real impact.</p>
-                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or learning about emerging web technologies.</p>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h1>Get in Touch</h1>
+                    <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
                 </div>
-                <div class="about-image">
-                    <img src="/images/placeholder.jpg" alt="Profile picture" class="loaded">
-                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
@@ -54,7 +64,7 @@
             });
 
             // Add hover effect for interactive elements
-            const interactiveElements = document.querySelectorAll('a, button, .project-card');
+            const interactiveElements = document.querySelectorAll('a, button, input, textarea');
             interactiveElements.forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     cursor.style.backgroundColor = '#ff0000';
@@ -87,7 +97,6 @@
                 document.documentElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
 
-                // Toggle icons
                 if (newTheme === 'dark') {
                     sunIcon.style.display = 'none';
                     moonIcon.style.display = 'block';
@@ -95,6 +104,15 @@
                     sunIcon.style.display = 'block';
                     moonIcon.style.display = 'none';
                 }
+            });
+
+            // Form submission handling
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Add your form submission logic here
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
             });
         });
     </script>
